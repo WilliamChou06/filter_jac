@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="nouislider.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Filtro JAC</title>
+  </head>
+  <body>
+    <div class="filtro-jac">
+      <div class="filtro__title">
+        <h4>Encuentra tu nuevo</h4>
+        <img
+          src="https://www.jacautos.cl/wp-content/themes/jac/img/texto-jac.png"
+          alt=""
+        />
+      </div>
+      <form action="">
+        <div class="filtro__body row">
+          <div class="col m5">
+            <div class="col m3 filtro__vehicleCategory">
+              <label for="vagoneta">
+                  <input type="checkbox" name="vagoneta" id="vagoneta">
+                <span><i class="fas fa-car-side"></i></span>
+                <span>VAGONETA</span>
+              </label>
+            </div>
+            <div class="col m3 filtro__vehicleCategory">
+                <label for="camioneta">
+                    <input type="checkbox" name="camioneta" id="camioneta">
+                  <span><i class="fas fa-truck-pickup"></i></span>
+                  <span>CAMIONETA</span>
+                </label>
+              </div>
+              <div class="col m3 filtro__vehicleCategory">
+                  <label for="van">
+                      <input type="checkbox" name="van" id="van">
+                    <span><i class="fas fa-shuttle-van"></i></span>
+                    <span>VAN</span>
+                  </label>
+                </div>
+          </div>
+          <div class="col m4 s12">
+            <p class="bold">Elige el rango de precios que más te acomode.</p> 
+            <div id="filtro__slider"></div>
+            <p class="filtro__slider__desde bold">desde</p> <p class="filtro__slider__hasta bold">hasta</p>
+          </div>
+          <div class="col m3 s12"><a class="waves-effect waves-light btn filtro__body__btn">DESCUBRE NUESTROS MODELOS</a></div>
+        </div>
+      </form>
+    </div>
+
+    <div id="test-slider"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="nouislider.js"></script>
+    <script>
+      var slider = document.getElementById('filtro__slider');
+      noUiSlider.create(slider, {
+        start: [20, 80],
+        connect: true,
+        step: 1,
+        orientation: 'horizontal', // 'horizontal' or 'vertical'
+        range: {
+          min: 0,
+          max: 100
+        },
+        format: wNumb({
+          decimals: 0
+        })
+      });
+    </script>
+  </body>
+</html>

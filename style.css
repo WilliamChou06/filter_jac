@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+}
+
+.filtro-jac {
+  position: relative;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.filtro__slider__desde {
+  float: left;
+}
+
+.filtro__slider__hasta {
+  float: right;
+}
+
+.filtro__title > h4 {
+  display: inline-block;
+  padding-right: 12px;
+}
+
+.filtro__title > img {
+  max-width: 120px;
+}
+
+.filtro__body__btn {
+  background: #d0011b;
+  position: absolute;
+  bottom: 0;
+  border-radius: 6px;
+}
+
+.filtro__body__btn:hover {
+  background: #ff0224;
+}
+
+.filtro__vehicleCategory {
+  border: 1px solid #333;
+  padding: 10px !important;
+  background: #333;
+  margin: 6px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.filtro__vehicleCategory > label > span {
+  display: block;
+}
+
+label {
+  color: #fff;
+}
+
+i {
+  font-size: 26px;
+}
+
+@media (max-width: 768px) {
+
+  .filtro__title  > h4{
+    font-size: 26px;
+  }
+
+  .filtro__title > img {
+    max-width: 90px;
+  }
+
+  .filtro__body__btn{
+    display: inline-block;
+    width: 95%;
+  }
+}
